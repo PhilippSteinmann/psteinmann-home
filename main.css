@@ -1,0 +1,244 @@
+body, html
+{
+  background-color: rgb(250, 245, 220);
+  margin: 0;
+  height: 100%;
+  width: 100%;
+
+  font-family: 'Libre Baskerville', serif;
+}
+
+::selection
+{
+  background-color: rgb(50,10,130);
+  color: white;
+}
+
+a 
+{
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0.0);
+}
+
+a:active
+{
+  outline: none;
+  border: none;
+}
+
+header
+{
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 200px;
+
+  background-color: rgb(10,0,90);
+  color: white;
+  text-align: center;
+} 
+header .logo
+{
+  display: block;
+
+  color: white;
+  text-decoration: none;
+  font-size: 90px;
+  font-family: "Times New Roman", serif;
+}
+
+.bang
+{
+  position: relative;
+}
+
+.excl
+{
+  position: absolute;
+  left: 0.04em;
+}
+
+header ul.links
+{
+  background-color: rgb(250,245,220);
+  border-right: 1px solid grey;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 0;
+ 
+}
+ 
+header .links li
+{
+  width: 100%;
+  display: block;
+
+  text-align: left;
+  list-style-type: none;
+}
+
+header .links a
+{
+  display: block;
+  padding: 15px 0 15px 40px; 
+
+  font-weight: bold;
+  text-decoration: none;
+  color: rgb(10,0,90);
+  /*transition: background-color 0.4s, color 0.4s;
+  -webkit-transition: background-color 0.4s, color 0.4s; */
+}
+
+header .links a:hover
+{
+  background-color: rgb(245, 194, 44);
+  background-color: rgb(138, 51, 36);
+  color: white;
+}
+
+header p.description
+{
+  margin-bottom: 40px;
+  margin-top: 00px;
+  line-height: 1.7;
+  
+  font-size: 16px;
+}
+
+header .signature
+{
+  font-family: 'Satisfy', 'Libre Baskerville', serif;
+  font-size: 19px;
+  display: block;
+}
+
+.content
+{
+  margin-left: 200px;
+  padding: 0 20px;
+  max-width: 960px;
+}
+
+h1
+{
+  color: rgb(138, 51, 36);
+  font-family: 'Satisfy', 'Libre Baskerville', serif;
+  font-size: 60px;
+
+  margin-bottom: 20px;
+}
+
+h2
+{
+  color: rgb(30,30,30);
+  font-size: 30px;
+  line-height: 1.6;
+  font-weight: normal;
+}
+
+.programming
+{
+  font-family: "VT323", 'Libre Baskerville', serif;
+  font-size: 40px;
+}
+
+.literature
+{
+  font-family: "Oleo Script Swash Caps", 'Libre Baskerville', serif;
+}
+
+.language
+{
+  font-family: "Arvo", 'Libre Baskerville', serif;
+  font-weight: bold;
+}
+
+@media all and (min-width: 401px) and (max-width: 1000px)
+{
+  header
+  {
+    position: static;
+    width: 100%;
+    float: left;
+  }
+
+  header .header-identification
+  {
+    width: 40%;
+    float: left;
+  }
+
+  header nav
+  {
+    float: right;
+    width: 60%;
+  }
+  
+
+  .content
+  {
+    margin-left: 0;
+    width: 93%;
+    float: left;
+    max-width: none;
+    padding-right: 0;
+  }
+
+  h1
+  {
+    font-size: 45px;
+  }
+  
+  h2
+  {
+    font-size: 23px;
+  }
+  
+  .programming
+  {
+    font-size: 30px;
+  }
+}
+
+@media all and (max-width: 400px)
+{
+  header
+  {
+    position: static;
+    width: 100%;
+    float: left;
+  }
+
+  header .links
+  {
+    border-right: none;
+  }
+  
+  header .links a
+  {
+  }
+
+  .content
+  {
+    margin-left: 0;
+    width: 93%;
+    float: left;
+    max-width: none;
+    padding-right: 0;
+  }
+
+  h1
+  {
+    font-size: 45px;
+  }
+  
+  h2
+  {
+    font-size: 23px;
+  }
+  
+  .programming
+  {
+    font-size: 30px;
+  }
+}
