@@ -11,13 +11,13 @@ body, html
 
 ::selection
 {
-  background: rgba(10, 0, 90, 0.99);
-  color: white;
+  background: rgba(15, 0, 60, 0.99);
+  color: white; 
 }
 
 ::-moz-selection
 {
-  background-color: rgb(10,0,90);
+  background-color: rgb(15,0,60);
   color: white;
 }
 
