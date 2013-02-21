@@ -37,6 +37,22 @@ function()
       $(".quest").stop().animate({ opacity: 1}, 300);
     } );
   } );
+
+  $("header a").click(
+  function(e)
+  {
+    e.preventDefault();
+    $(this).css("border", "none"); 
+    $(this).css("outline", "none");
+    hash = $(this).attr("href");
+    var offset = $(hash).offset();
+    $("html,body").animate({
+        scrollTop: offset.top,
+        scrollLeft: offset.left
+    }, 500, function() {
+      window.location.hash = hash;
+    } );
+  } );
 } );
 
 function nextImage()

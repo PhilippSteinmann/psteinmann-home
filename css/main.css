@@ -127,6 +127,7 @@ header .signature
   margin-left: 200px;
   padding: 0 20px;
   max-width: 960px;
+  height: 100%;
 }
 
 h1
@@ -181,6 +182,29 @@ h2
 .slideshow-img
 {
   width: 100%;
+}
+
+section
+{
+  width: 100%;
+  min-height: 100%;
+}
+
+#programming h1
+{
+  font-family: "VT323", "Satisfy", "Libre Baskerville", serif;
+  font-weight: normal;
+}
+
+#literature h1
+{
+  font-family: "Oleo Script Swash Caps";
+  
+}
+
+#language h1
+{
+  font-family: "Arvo";
 }
 
 @media all and (min-width: 401px) and (max-width: 1000px)
