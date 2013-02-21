@@ -54,8 +54,8 @@ slideshow:
   <div class="content">
     <section id="top">
       <h1>I'm Philipp Steinmann,</h1>
-      <h2>A student in New York City, of German and Greek origins. </h2>
-      <h2>My interests include programming, literature, and language.</h2>
+      <p>A student in New York City, of German and Greek origins. </p>
+      <p>My interests include programming, literature, and language.</p>
       <div class="slideshow">
         <img class="slideshow-img" src="">
       </div>
@@ -79,6 +79,18 @@ slideshow:
 
     <section id="thoughts">
       <h1>Thoughts</h1>
+      <div class="posts">
+        <div class="posts-wrapper">
+          {% for post in site.posts %}
+            <article id="{{ post.id }}">
+              <h3>{{ post.subtitle }} </h3>
+              <h2>{{ post.title }} </h2>
+              <small>{{ post.date | date: "%d %B %Y" }}</small>
+              {{ post.content }}
+              </article>
+          {% endfor %}
+        </div>
+      </div>
     </section>
 
   </div>
