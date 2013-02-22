@@ -81,18 +81,14 @@ slideshow:
       <h1>Thoughts</h1>
       <div class="posts-controls">
         <button class="back">&#9664;</button>
-        <button class="forward">&#9654; </button>
+        <button class="next">&#9654; </button>
       </div>
-          {% for post in site.posts %}
-            <article id="{{ post.id }}">
-              <h2>{{ post.title }} </h2>
-              <h3>{{ post.subtitle }} </h3>
-              <small>{{ post.date | date: "%d %B %Y" }}</small>
-              {{ post.content }}
-              </article>
-          {% endfor %}
-        </div>
-      </div>
+      <article>
+        <h2></h2>
+        <h3></h3>
+        <small></small>
+        <div class="article-content"> </div>
+      </article>
     </section>
 
   </div>
@@ -110,11 +106,11 @@ slideshow:
 
   <script>
     posts = []
-    current_post = 
-    <% for posts in site.posts %>
-   
-
-    <% endfor %>
+    current_post = 0
+    {% for post in site.posts %}
+      posts.push({url: "{{ post.url }}", title: "{{ post.title }}", subtitle: "{{ post.subtitle }}", date: "{{ post.date | date: "%d %B %Y"}}" });
+    {% endfor %}
+    updatePost();
   </script>
 </body>
 </html>

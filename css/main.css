@@ -24,7 +24,14 @@ body, html
 a 
 {
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0.0);
-  color: rgb(
+  color: rgb(30,60,160);
+  text-decoration: none;
+  border-bottom: 1px dotted rgb(30,60,160);
+}
+
+a:hover
+{
+  border-bottom: 1px solid rgb(30,60,160);
 }
 
 a:active
@@ -54,6 +61,7 @@ header .logo
   text-decoration: none;
   font-size: 90px;
   font-family: "Times New Roman", serif;
+  border: none;
 }
 
 .bang
@@ -94,6 +102,7 @@ header .links a
   font-weight: bold;
   text-decoration: none;
   color: rgb(10,0,90);
+  border: none;
   /*transition: background-color 0.4s, color 0.4s;
   -webkit-transition: background-color 0.4s, color 0.4s; */
 }

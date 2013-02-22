@@ -53,11 +53,22 @@ function()
       window.location.hash = hash;
     } );
   } );
+
+  $(".back").click(
+  function()
+  {
+    prevPost();
+  } );
+ 
+  $(".next").click(
+  function()
+  { 
+    nextPost();
+  } );
 } );
 
 function nextImage()
 { 
-  console.log(current_img);
   current_img = (current_img + 1) % images.length;
   $(".slideshow-img").fadeOut(400,
   function()
@@ -66,5 +77,33 @@ function nextImage()
     $(".slideshow-img").attr("title", images[current_img].caption);
     $(".slideshow-img").attr("alt", images[current_img].caption);
     $(".slideshow-img").fadeIn(400);
+  } );
+}
+
+function prevPost()
+{
+  current_post += 1;
+  updatePost();
+}
+
+function nextPost()
+{
+  current_post -= 1;
+  updatePost();
+}
+
+function updatePost()
+{
+  $("article").fadeOut(300, function()
+  {
+    post = posts[current_post];
+    $("article h2").text(post.title);
+    $("article h3").text(post.subtitle);
+    $("article small").text(post.date);
+    $.get(post.url, function(content)
+    {
+      $("article .article-content").html(content);
+    } );
+    $("article").fadeIn(300);
   } );
 }
