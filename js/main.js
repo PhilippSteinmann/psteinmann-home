@@ -106,7 +106,7 @@ function updatePost()
     $("article h2").text(post.title);
     $("article h3").text(post.subtitle);
     $("article small").text(post.date);
-    $.get("/psteinmann-home" + post.url, function(content)
+    $.get(post.url.substr(1), function(content)
     {
       $("article .article-content").html(content);
     } );
