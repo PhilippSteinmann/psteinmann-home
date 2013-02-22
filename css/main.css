@@ -24,6 +24,7 @@ body, html
 a 
 {
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0.0);
+  color: rgb(
 }
 
 a:active
@@ -112,6 +113,7 @@ header p.description
   
   font-size: 16px;
   font-size: 1rem;
+  color: white;
 }
 
 header .signature
@@ -128,6 +130,18 @@ header .signature
   padding: 0 20px;
   max-width: 960px;
   height: 100%;
+}
+
+a
+{
+}
+
+a:hover
+{
+}
+
+a:active
+{
 }
 
 h1
@@ -231,22 +245,43 @@ article
 article h3
 {
   font-variant: small-caps;
-  margin-bottom: 0;
+  margin-bottom: 5px;
+  margin-top: 0;
+  color: rgb(130,130,130);
+
+  font-size: 16px;
+  font-size: 1rem;
 }
 
 article h2
 {
-  margin-top: 15px;
   margin-bottom: 10px;
+
+  font-family: "Arvo", "Libre Baskerville", serif;
+  font-size: 30px;
+  font-size: 1.875rem;
+}
+
+article small
+{
+  color: rgb(130,130,130);
 }
 
 article p
 {
+  font-family: "Libre Baskerville", sans-serif;
   font-size: 18px;
   font-size: 1.125rem;
-  line-height: 1.5;
+  line-height: 1.75;
   
-  margin: 27px 0;
+  margin: 31.5px 0;
+
+  max-width: 100%;
+}
+
+article p:nth-of-type(1)
+{
+  margin-top: 15px;
 }
 
 @media all and (min-width: 401px) and (max-width: 1000px)

@@ -79,12 +79,14 @@ slideshow:
 
     <section id="thoughts">
       <h1>Thoughts</h1>
-      <div class="posts">
-        <div class="posts-wrapper">
+      <div class="posts-controls">
+        <button class="back">&#9664;</button>
+        <button class="forward">&#9654; </button>
+      </div>
           {% for post in site.posts %}
             <article id="{{ post.id }}">
-              <h3>{{ post.subtitle }} </h3>
               <h2>{{ post.title }} </h2>
+              <h3>{{ post.subtitle }} </h3>
               <small>{{ post.date | date: "%d %B %Y" }}</small>
               {{ post.content }}
               </article>
@@ -104,6 +106,15 @@ slideshow:
     {% endfor %}
     nextImage();
     setInterval(nextImage, 8000);
+  </script>
+
+  <script>
+    posts = []
+    current_post = 
+    <% for posts in site.posts %>
+   
+
+    <% endfor %>
   </script>
 </body>
 </html>
