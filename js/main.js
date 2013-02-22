@@ -82,14 +82,20 @@ function nextImage()
 
 function prevPost()
 {
-  current_post += 1;
-  updatePost();
+  if (current_post + 1  < posts.length)
+  {
+    current_post += 1;
+    updatePost();
+  }
 }
 
 function nextPost()
 {
-  current_post -= 1;
-  updatePost();
+  if (current_post - 1 >= 0)
+  {
+    current_post -= 1;
+    updatePost();
+  }
 }
 
 function updatePost()
