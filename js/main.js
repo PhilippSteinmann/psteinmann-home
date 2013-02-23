@@ -65,6 +65,8 @@ function()
   { 
     nextPost();
   } );
+
+alert(window.innerHeight);
 } );
 
 function nextImage()
