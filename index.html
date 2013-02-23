@@ -95,11 +95,11 @@ slideshow:
       </div>
       <article>
         <hgroup>
-          <h2></h2>
-          <h3></h3> 
+          <h2>{{ site.posts.first.title }}</h2>
+          <h3>{{ site.posts.first.subtitle }}</h3> 
         </hgroup>
-        <time datetime="" pubdate></time>
-        <div class="article-content"> </div>
+        <time datetime="" pubdate>{{ site.posts.first.date | date: "%d %B %Y" }}</time>
+        <div class="article-content">{{ site.posts.first.content }} </div>
       </article>
     </section>
 
@@ -122,7 +122,6 @@ slideshow:
     {% for post in site.posts %}
       posts.push({url: "{{ post.url }}", title: "{{ post.title }}", subtitle: "{{ post.subtitle }}", date: "{{ post.date | date: "%d %B %Y"}}" });
     {% endfor %}
-    updatePost();
   </script>
 </body>
 </html>
