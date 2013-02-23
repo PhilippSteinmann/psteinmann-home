@@ -105,7 +105,7 @@ function updatePost()
     post = posts[current_post];
     $("article h2").text(post.title);
     $("article h3").text(post.subtitle);
-    $("article small").text(post.date);
+    $("article time").text(post.date).attr("datetime", post.date);
     $.get(post.url.substr(1), function(content)
     {
       $("article .article-content").html(content);

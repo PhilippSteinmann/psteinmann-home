@@ -1,10 +1,46 @@
+/*
+element
+{
+  box-model & position
+
+  styling
+}
+
+box-model & position:
+display
+width
+min-width
+height
+min-height
+position
+top, right, bottom, left
+float
+margin
+padding
+
+styling:
+border
+background-color
+color
+font
+text
+*/
+
+
+/* === Sitewide Defaults === */
+*
+{
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
 body, html
 {
-  background-color: rgb(250, 245, 220);
-  margin: 0;
-  height: 100%;
   width: 100%;
+  height: 100%;
+  margin: 0;
 
+  background-color: rgb(250, 245, 220);
   font-family: 'Libre Baskerville', serif;
   font-size: 100%;
 }
@@ -21,25 +57,13 @@ body, html
   color: white;
 }
 
-a 
+a
 {
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0.0);
-  color: rgb(30,60,160);
-  text-decoration: none;
-  border-bottom: 1px dotted rgb(30,60,160);
 }
 
-a:hover
-{
-  border-bottom: 1px solid rgb(30,60,160);
-}
 
-a:active
-{
-  outline: none;
-  border: none;
-}
-
+/* === Header Style === */
 header
 {
   position: fixed;
@@ -57,11 +81,12 @@ header .logo
 {
   display: block;
 
-  color: white;
-  text-decoration: none;
-  font-size: 90px;
-  font-family: "Times New Roman", serif;
   border: none;
+  color: white;
+  font-family: "Times New Roman", serif;
+  font-size: 90px;
+  font-size: 5.625rem;
+  text-decoration: none;
 }
 
 .bang
@@ -73,45 +98,6 @@ header .logo
 {
   position: absolute;
   left: 0.04em;
-}
-
-header ul.links
-{
-  background-color: rgb(250,245,220);
-  border-right: 1px solid grey;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 0;
- 
-}
- 
-header .links li
-{
-  width: 100%;
-  display: block;
-
-  text-align: left;
-  list-style-type: none;
-}
-
-header .links a
-{
-  display: block;
-  padding: 15px 0 15px 40px; 
-
-  font-weight: bold;
-  text-decoration: none;
-  color: rgb(10,0,90);
-  border: none;
-  /*transition: background-color 0.4s, color 0.4s;
-  -webkit-transition: background-color 0.4s, color 0.4s; */
-}
-
-header .links a:hover
-{
-  background-color: rgb(245, 194, 44);
-  background-color: rgb(138, 51, 36);
-  color: white;
 }
 
 header p.description
@@ -127,59 +113,147 @@ header p.description
 
 header .signature
 {
+  display: block;
+
   font-family: 'Satisfy', 'Libre Baskerville', serif;
   font-size: 19px;
   font-size: 1.19rem;
-  display: block;
 }
 
+header ul.links
+{
+  padding: 10px 0;
+
+  border-right: 1px solid grey;
+  background-color: rgb(250,245,220);
+ 
+}
+ 
+header .links li
+{
+  display: block;
+  width: 100%;
+
+  list-style-type: none;
+  text-align: left;
+}
+
+header .links a
+{
+  display: block;
+  padding: 15px 0 15px 40px; 
+
+  border: none;
+  font-weight: bold;
+  color: rgb(10,0,90);
+  text-decoration: none;
+}
+
+header .links a:hover
+{
+  background-color: rgb(138, 51, 36);
+  color: white;
+}
+
+@media all and (min-width: 401px) and (max-width: 1000px)
+{
+  header
+  {
+    float: left;
+    position: static;
+    width: 100%;
+  }
+
+  header .header-identification
+  {
+    float: left;
+    width: 40%;
+  }
+
+  header nav
+  {
+    float: right;
+    width: 60%;
+  }
+}
+
+@media all and (max-width: 400px)
+{
+  header
+  {
+    float: left;
+    position: static;
+    width: 100%;
+  }
+
+  header .links
+  {
+    border-right: none;
+  }
+}
+
+
+/* === Content Style */
 .content
 {
+  height: 100%;
+  max-width: 960px;
   margin-left: 200px;
   padding: 0 20px;
-  max-width: 960px;
-  height: 100%;
 }
 
-a
+p, button
 {
+  color: rgb(30,30,30);
+}
+
+a 
+{
+  border-bottom: 1px dotted rgb(30,60,160);
+  color: rgb(30,60,160);
+  text-decoration: none;
 }
 
 a:hover
 {
+  border-bottom: 1px solid rgb(30,60,160);
 }
 
 a:active
 {
+  outline: none;
+  border: none;
 }
+
 
 h1
 {
+  margin-bottom: 20px;
+  margin-top: 30px;
+
   color: rgb(138, 51, 36);
   font-family: 'Satisfy', 'Libre Baskerville', serif;
   font-size: 60px;
   font-size: 3.75rem;
-
-  margin-bottom: 20px;
 }
 
 p
 {
-  color: rgb(30,30,30);
-  font-size: 30px;
-  font-size: 1.88rem;
-  font-weight: normal;
-  line-height: 1.5;
-  
   margin: 30px 0;
   margin: 1.88rem 0;
+
+  color: rgb(30,30,30);
+  line-height: 1.5;
+  font-size: 30px;
+  font-size: 1.875rem;
+  font-weight: normal;
 }
 
 .programming
 {
   font-family: "VT323", 'Libre Baskerville', serif;
   font-size: 35px;
-  font-size: 2.19rem;
+  font-size: 2.1875rem;
 }
 
 .literature
@@ -195,11 +269,10 @@ p
 
 .slideshow
 {
-  margin: 60px auto 0 auto;
-
   width: 300px;
   max-width: 100%;
   height: 400px;
+  margin: 60px auto 0 auto;
 }
 
 .slideshow-img
@@ -222,7 +295,6 @@ section
 #literature h1
 {
   font-family: "Oleo Script Swash Caps";
-  
 }
 
 #language h1
@@ -230,36 +302,31 @@ section
   font-family: "Arvo";
 }
 
-.posts
+#thoughts h1
 {
-  overflow: hidden;
+  margin-bottom: 10px;
 }
 
-.posts-wrapper
+.back, .next
 {
-  position:relative;
-  left:0;
-  width: 3000px;
-  height:100%;
+  padding: 10px 8px;
+  margin: -10px 0;
+
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.back:hover, .next:hover
+{
+  color: rgb(138, 20, 10);
 }
 
 article
 {
+  float: left;
   width: 100%;
   height: 100%;
-  float: left;
-  padding: 10px;
-}
-
-article h3
-{
-  font-variant: small-caps;
-  margin-bottom: 5px;
-  margin-top: 0;
-  color: rgb(130,130,130);
-
-  font-size: 16px;
-  font-size: 1rem;
 }
 
 article h2
@@ -272,21 +339,33 @@ article h2
   font-size: 1.875rem;
 }
 
-article small
+article h3
+{
+  margin-bottom: 5px;
+  margin-top: 0;
+
+  color: rgb(130,130,130);
+  font-size: 16px;
+  font-size: 1rem;
+  font-variant: small-caps;
+}
+
+article time
 {
   color: rgb(130,130,130);
+  font-size: 13px;
+  font-size: 0.8125rem;
 }
 
 article p
 {
+  max-width: 100%;
+  margin: 31.5px 0;
+
+  line-height: 1.75;
   font-family: "Libre Baskerville", sans-serif;
   font-size: 18px;
   font-size: 1.125rem;
-  line-height: 1.75;
-  
-  margin: 31.5px 0;
-
-  max-width: 100%;
 }
 
 article p:nth-of-type(1)
@@ -294,34 +373,34 @@ article p:nth-of-type(1)
   margin-top: 15px;
 }
 
+article img
+{
+  display: block;
+  width: 300px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+article img.left-aligned
+{
+  float: left;
+  margin-right: 15px;
+  margin-top: 5px;
+}
+
+article img.medium-size
+{
+  width: 350px;
+}
+
 @media all and (min-width: 401px) and (max-width: 1000px)
 {
-  header
-  {
-    position: static;
-    width: 100%;
-    float: left;
-  }
-
-  header .header-identification
-  {
-    width: 40%;
-    float: left;
-  }
-
-  header nav
-  {
-    float: right;
-    width: 60%;
-  }
-  
-
   .content
   {
-    margin-left: 0;
-    width: 93%;
     float: left;
+    width: 93%;
     max-width: none;
+    margin-left: 0;
     padding-right: 0;
   }
 
@@ -343,28 +422,12 @@ article p:nth-of-type(1)
 
 @media all and (max-width: 400px)
 {
-  header
-  {
-    position: static;
-    width: 100%;
-    float: left;
-  }
-
-  header .links
-  {
-    border-right: none;
-  }
-  
-  header .links a
-  {
-  }
-
   .content
   {
-    margin-left: 0;
-    width: 93%;
     float: left;
+    width: 93%;
     max-width: none;
+    margin-left: 0;
     padding-right: 0;
   }
 
