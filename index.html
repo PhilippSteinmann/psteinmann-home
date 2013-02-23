@@ -122,6 +122,7 @@ slideshow:
     {% for post in site.posts %}
       posts.push({url: "{{ post.url }}", title: "{{ post.title }}", subtitle: "{{ post.subtitle }}", date: "{{ post.date | date: "%d %B %Y"}}" });
     {% endfor %}
+    updatePost();
   </script>
 </body>
 </html>
