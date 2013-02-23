@@ -51,6 +51,7 @@ function()
         scrollLeft: offset.left
     }, 500, function() {
       window.location.hash = hash;
+      document.title = $(hash).data("title") + " | Philipp Steinmann"
     } );
   } );
 
@@ -65,8 +66,6 @@ function()
   { 
     nextPost();
   } );
-
-alert(window.innerHeight);
 } );
 
 function nextImage()
