@@ -66,6 +66,12 @@ function()
   { 
     nextPost();
   } );
+
+  $(".show-nav").click(
+  function()
+  {
+    $("nav").slideToggle(500);
+  } );
 } );
 
 function nextImage()

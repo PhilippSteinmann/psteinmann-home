@@ -32,6 +32,8 @@ text
 {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
+
+  font-family: "Libre Baskerville", Georgia, serif;
 }
 
 body, html
@@ -57,7 +59,7 @@ body, html
   color: white;
 }
 
-a
+a, button
 {
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0.0);
   cursor: pointer;
@@ -126,6 +128,21 @@ header .signature
   font-size: 1.19rem;
 }
 
+header .show-nav
+{
+  display: none;
+  width: 100%;
+  margin: 0 auto 10px 0;
+ 
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  font-variant: small-caps;
+}
+
 header ul.links
 {
   padding: 10px 0;
@@ -161,7 +178,11 @@ header .links a:hover
   color: white;
 }
 
-@media all and (min-width: 401px) and (max-width: 1000px)
+@media 
+all and (min-width: 481px) and (max-width: 1000px) and (-webkit-max-device-pixel-ratio: 1),
+all and (min-width: 481px) and (max-width: 1000px) and (max--moz-device-pixel-ratio: 1),
+all and (min-width: 481px) and (max-width: 1000px) and (max-device-pixel-ratio: 1),
+all and (min-width: 481px) and (max-width: 1000px) and (max-resolution: 1dppx)
 {
   header
   {
@@ -183,7 +204,13 @@ header .links a:hover
   }
 }
 
-@media all and (max-width: 400px)
+
+@media all and (max-width: 480px), /*all resolutions below 480px*/
+/*also high-def browsers below 1000px*/
+all and (max-width: 1000px) and (-webkit-min-device-pixel-ratio: 1.5),
+all and (max-width: 1000px) and (min--moz-device-pixel-ratio: 1.5),
+all and (max-width: 1000px) and (min-device-pixel-ratio: 1.5),
+all and (max-width: 1000px) and (min-resolution: 1.5dppx)
 {
   header
   {
@@ -192,9 +219,24 @@ header .links a:hover
     width: 100%;
   }
 
+  header p.description 
+  {
+    margin-bottom: 15px;
+  }
+
   header .links
   {
     border-right: none;
+  }
+
+  nav 
+  {
+    display: none;
+  }
+
+  header .show-nav
+  {
+    display: block;
   }
 }
 
@@ -311,7 +353,7 @@ section h2
 
 #programming h1
 {
-  font-family: "VT323", "Satisfy", "Libre Baskerville", serif;
+  font-family: "VT323", "Satisfy", "Libre Baskerville", "Georgia", serif;
   font-weight: normal;
 }
 
@@ -357,7 +399,7 @@ article h2
   margin-bottom: 10px;
   margin-top: 15px;
 
-  font-family: "Arvo", "Libre Baskerville", serif;
+  font-family: "Arvo", "Libre Baskerville", "Georgia", serif;
   font-size: 30px;
   font-size: 1.875rem; 
   font-weight: bold;
@@ -416,31 +458,7 @@ article img.medium-size
   }
 }
 
-@media all and (min-width: 401px) and (max-width: 1000px)
-{
-  .content
-  {
-    float: left;
-    width: 93%;
-    max-width: none;
-    margin-left: 0;
-    padding-right: 0;
-  }
-
-  h1
-  {
-    font-size: 45px;
-    font-size: 2.8125;
-  }
-  
-  p.large
-  {
-    font-size: 23px;
-    font-size: 1.4375rem;
-  }
-}
-
-@media all and (max-width: 400px)
+@media all and (max-width: 1000px)
 {
   .content
   {
