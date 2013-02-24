@@ -32,8 +32,6 @@ text
 {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
-
-  font-family: "Libre Baskerville", Georgia, serif;
 }
 
 body, html
@@ -85,11 +83,6 @@ header .logo
   display: block;
 
   border: none;
-  color: white;
-  font-family: "Times New Roman", serif;
-  font-size: 90px;
-  font-size: 5.625rem;
-  text-decoration: none;
 }
 
 header .logo:hover
@@ -100,6 +93,12 @@ header .logo:hover
 .bang
 {
   position: relative;
+
+  color: white;
+  font-family: "Times New Roman", serif;
+  font-size: 90px;
+  font-size: 5.625rem;
+  text-decoration: none;
 }
 
 .excl
@@ -138,7 +137,9 @@ header .show-nav
   border: none;
   background: none;
   color: white;
+  font-family: 'Libre Baskerville', "Georgia", serif;
   font-size: 18px;
+  font-size: 1.125rem;
   font-weight: bold;
   font-variant: small-caps;
 }
@@ -276,7 +277,7 @@ a:active
 h1
 {
   margin-bottom: 20px;
-  margin-top: 30px;
+  margin-top: 15px;
 
   color: rgb(138, 51, 36);
   font-family: 'Satisfy', 'Libre Baskerville', serif;
@@ -423,13 +424,6 @@ article time
   font-size: 0.8125rem;
 }
 
-/*
-article p:nth-of-type(1)
-{
-  margin-top: 15px;
-}
-*/
-
 article img
 {
   display: block;
@@ -474,10 +468,24 @@ article img.medium-size
     font-size: 45px;
     font-size: 2.8125;
   }
-  
+
   p.large
   {
     font-size: 23px;
     font-size: 1.4375rem;
+  }
+}
+
+@media all and (max-width: 480px), /*all resolutions below 480px*/
+/*also high-def browsers below 1000px*/
+all and (max-width: 1000px) and (-webkit-min-device-pixel-ratio: 1.5),
+all and (max-width: 1000px) and (min--moz-device-pixel-ratio: 1.5),
+all and (max-width: 1000px) and (min-device-pixel-ratio: 1.5),
+all and (max-width: 1000px) and (min-resolution: 1.5dppx)
+{
+  p.large
+  {
+    font-size: 21px;
+    font-size: 1.3125rem;
   }
 }
