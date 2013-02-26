@@ -473,6 +473,9 @@ article img.medium-size
 
   p.large
   {
+    margin: 23px 0;
+    margin: 1.4755rem 0;
+
     font-size: 23px;
     font-size: 1.4375rem;
   }
@@ -487,8 +490,20 @@ all and (max-width: 1000px) and (min-resolution: 1.5dppx)
 {
   p.large
   {
-    font-size: 21px;
-    font-size: 1.3125rem;
+    margin: 20px 0;
+    margin: 1.25rem 0;
+
+    font-size: 20px;
+    font-size: 1.25rem;
+  }
+  
+  p
+  {
+    margin: 28px 0;
+    margin: 1.75rem 0;
+
+    font-size: 16px;
+    font-size: 1rem;
   }
 }
 
