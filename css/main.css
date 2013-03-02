@@ -309,6 +309,19 @@ p.large
   font-weight: normal;
 }
 
+img
+{
+  display: block;
+  width: 300px;
+  max-width: 100%;
+  margin: 0 auto;
+
+  /* For the ALT text */
+  font-family: "Libre Baskerville", sans-serif;
+  font-size: 18px;
+  font-size: 1.125rem;
+}
+
 img.left-aligned
 {
   float: left;
@@ -316,11 +329,17 @@ img.left-aligned
   margin-top: 5px;
 }
 
+img.right-aligned
+{
+    float: right;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+
 img.medium-size
 {
   width: 350px;
 }
-
 
 .slideshow
 {
@@ -437,14 +456,6 @@ article time
   color: rgb(130,130,130);
   font-size: 13px;
   font-size: 0.8125rem;
-}
-
-article img
-{
-  display: block;
-  width: 300px;
-  max-width: 100%;
-  margin: 0 auto;
 }
 
 @media all and (max-height: 600px)
