@@ -357,6 +357,7 @@ section
 {
   width: 100%;
   min-height: 100%;
+  margin-bottom: 8%;
 
   border-top: 1px solid rgb(180,180,180);
 }
