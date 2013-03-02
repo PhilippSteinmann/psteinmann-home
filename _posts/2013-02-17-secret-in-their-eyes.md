@@ -1,6 +1,8 @@
 ---
-title: El Secreto de Sus Ojos (2009)
+layout: post
+title: El Secreto de Sus Ojos
 subtitle: Movie Review
+year: 2009
 ---
 A sad, heavy Argentinian film. The story is told from the perspective of a retired detective, Benjamin Esposito, reflecting on his life and trying to write a novel about a rape and murder case that he can't get out of his head. Past and present intertwine and to show his insecurities and nostalgia for the times that were. He regrets the death of his friend in place of his own and thinks longingly of the opportunities he missed with the woman he loved and of the unforgettable devotion of the crime victim's husband, Morales. 
 

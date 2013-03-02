@@ -55,17 +55,9 @@ function()
     } );
   } );
 
-  $(".back").click(
-  function()
-  {
-    prevPost();
-  } );
+  $(".back").click(prevPost);
  
-  $(".next").click(
-  function()
-  { 
-    nextPost();
-  } );
+  $(".next").click(nextPost);
 
   $(".show-nav").click(
   function()
@@ -110,13 +102,10 @@ function updatePost()
   $("article").fadeOut(300, function()
   {
     post = posts[current_post];
-    $("article h2").text(post.title);
-    $("article h3").text(post.subtitle);
-    $("article time").text(post.date).attr("datetime", post.date);
-    $.get(post.url.substr(1), function(content)
+    $.get(post.substr(1), function(content)
     {
-      $("article .article-content").html(content);
+      $("article").html(content);
+      $("article").fadeIn(300);
     } );
-    $("article").fadeIn(300);
   } );
 }

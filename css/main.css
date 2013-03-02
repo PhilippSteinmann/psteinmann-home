@@ -309,6 +309,19 @@ p.large
   font-weight: normal;
 }
 
+img.left-aligned
+{
+  float: left;
+  margin-right: 15px;
+  margin-top: 5px;
+}
+
+img.medium-size
+{
+  width: 350px;
+}
+
+
 .slideshow
 {
   width: 300px;
@@ -432,18 +445,6 @@ article img
   width: 300px;
   max-width: 100%;
   margin: 0 auto;
-}
-
-article img.left-aligned
-{
-  float: left;
-  margin-right: 15px;
-  margin-top: 5px;
-}
-
-article img.medium-size
-{
-  width: 350px;
 }
 
 @media all and (max-height: 600px)

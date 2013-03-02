@@ -1,4 +1,5 @@
 ---
+layout: post
 title: A Load Off My Shoulders
 subtitle: Department of Spring Cleaning
 ---
