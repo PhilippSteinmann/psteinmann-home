@@ -379,6 +379,32 @@ section h2
   font-weight: normal;
 }
 
+section .currently-learning
+{
+  display: inline-block;
+  margin-top: 0;
+
+  background-color: rgb(200,235,255);
+}
+
+section .currently-learning:before
+{
+  content: "Learning Now > "
+}
+
+section .learn-in-future
+{
+  display: inline-block;
+  margin-top: 0;
+
+  background-color: rgb(255,205,205);
+}
+
+section .learn-in-future:before
+{
+    content: "In the Future > "
+}
+
 #top
 {
   border-top: none;
