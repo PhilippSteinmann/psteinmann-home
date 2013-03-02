@@ -19,5 +19,23 @@
   {{ content }}
   <script src="js/jquery.js"> </script>
   <script src="js/main.js"> </script>
+  <script>
+    images = []
+    current_img = -1;
+    {% for img in page.slideshow %}
+      images.push({url: "img/{{ img.name }}.jpg", caption: "{{ img.caption }}" }); 
+    {% endfor %}
+    nextImage();
+    setInterval(nextImage, 8000);
+  </script>
+  
+  <script>
+    posts = []
+    current_post = 0
+    {% for post in site.posts %}
+      posts.push("{{ post.url }}");
+    {% endfor %}
+    updatePost();
+  </script>
 </body>
 </html>

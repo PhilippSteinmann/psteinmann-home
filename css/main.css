@@ -383,26 +383,50 @@ section .currently-learning
 {
   display: inline-block;
   margin-top: 0;
+  padding: 4px 7px;
 
-  background-color: rgb(200,235,255);
+  background-color: rgb(10,0,90);
+  color: white;
 }
 
 section .currently-learning:before
 {
-  content: "Learning Now > "
+  content: "Learning Now > ";
+  color: rgb(190,190,190);
+}
+
+section .currently-learning a:hover
+{
+  background-color: white;
+  color: rgb(10,0,90);
 }
 
 section .learn-in-future
 {
   display: inline-block;
   margin-top: 0;
+  padding: 4px 7px;
 
-  background-color: rgb(255,205,205);
+  background-color: rgb(138, 51, 36);
+  color: white;
 }
 
 section .learn-in-future:before
 {
-    content: "In the Future > "
+    content: "In the Future > ";
+    color: rgb(190,190,190);
+}
+
+section .learn-in-future a, section .currently-learning a
+{
+   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+   color: white;
+}
+
+section .learn-in-future a:hover
+{
+  background-color: white;
+  color: rgb(138, 51, 36);
 }
 
 #top
