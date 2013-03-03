@@ -1,4 +1,14 @@
 /*
+-----------------------------------------------
+Typesetting
+Author:   Philipp Steinmann
+Date:     2013-03-02
+18px @ 1:1.618
+http://modularscale.com/scale/?px1=18&px2=&ra1=1.618&ra2=0
+Thanks to http://alistapart.com/article/more-meaningful-typography
+----------------------------------------------- */
+
+/*
 element
 {
   box-model & position
@@ -41,8 +51,7 @@ body, html
   margin: 0;
 
   background-color: rgb(255, 250, 235);
-  font-family: 'Libre Baskerville', serif;
-  font-size: 100%;
+  font: 18px 'Libre Baskerville', serif;
 }
 
 ::selection
@@ -57,12 +66,16 @@ body, html
   color: white;
 }
 
+h1, h2, h3, p, a
+{
+  text-rendering: optimizeLegibility; 
+}
+
 a, button
 {
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0.0);
   cursor: pointer;
 }
-
 
 /* === Header Style === */
 header
@@ -71,7 +84,7 @@ header
   left: 0;
   top: 0;
   bottom: 0;
-  width: 200px;
+  width: 199.603px; /* 18px * 1.618 ** 5*/
 
   background-color: rgb(10,0,90);
   color: white;
@@ -95,9 +108,8 @@ header .logo:hover
   position: relative;
 
   color: white;
-  font-family: "Times New Roman", serif;
-  font-size: 90px;
-  font-size: 5.625rem;
+  font: 90px "Times New Roman", serif;
+  font-size: 5rem;
   text-decoration: none;
 }
 
@@ -110,11 +122,11 @@ header .logo:hover
 header p.description
 {
   margin-bottom: 40px;
-  margin-top: 00px;
+  margin-top: 0;
   line-height: 1.7;
   
-  font-size: 16px;
-  font-size: 1rem;
+  font-size: 16px; /* I improvised*/
+  font-size: 0.888rem;
   color: white;
 }
 
@@ -123,8 +135,8 @@ header .signature
   display: block;
 
   font-family: 'Satisfy', 'Libre Baskerville', serif;
-  font-size: 19px;
-  font-size: 1.19rem;
+  font-size: 19px; /* Oops, I did it again*/
+  font-size: 1.055rem;
 }
 
 header .show-nav
@@ -137,11 +149,7 @@ header .show-nav
   border: none;
   background: none;
   color: white;
-  font-family: 'Libre Baskerville', "Georgia", serif;
-  font-size: 18px;
-  font-size: 1.125rem;
-  font-weight: bold;
-  font-variant: small-caps;
+  font: small-caps bold 18px 'Libre Baskerville', "Georgia", serif;
 }
 
 header ul.links
@@ -167,6 +175,7 @@ header .links a
   padding: 15px 0 15px 40px; 
 
   border: none;
+  font-size: 0.888rem;
   font-weight: bold;
   color: rgb(10,0,90);
   text-decoration: none;
@@ -180,9 +189,7 @@ header .links a:hover
 
 @media 
 all and (min-width: 481px) and (max-width: 1000px) and (-webkit-max-device-pixel-ratio: 1),
-all and (min-width: 481px) and (max-width: 1000px) and (max--moz-device-pixel-ratio: 1),
-all and (min-width: 481px) and (max-width: 1000px) and (max-device-pixel-ratio: 1),
-all and (min-width: 481px) and (max-width: 1000px) and (max-resolution: 1dppx)
+all and (min-width: 481px) and (max-width: 1000px) and (max-resolution: 96dpi)
 {
   header
   {
@@ -208,9 +215,7 @@ all and (min-width: 481px) and (max-width: 1000px) and (max-resolution: 1dppx)
 @media all and (max-width: 480px), /*all resolutions below 480px*/
 /*also high-def browsers below 1000px*/
 all and (max-width: 1000px) and (-webkit-min-device-pixel-ratio: 1.5),
-all and (max-width: 1000px) and (min--moz-device-pixel-ratio: 1.5),
-all and (max-width: 1000px) and (min-device-pixel-ratio: 1.5),
-all and (max-width: 1000px) and (min-resolution: 1.5dppx)
+all and (max-width: 1000px) and (min-resolution: 144dpi)
 {
   header
   {
@@ -275,36 +280,35 @@ a:active
 
 h1
 {
-  margin-bottom: 20px;
-  margin-top: 15px;
+  margin: 0 0 31.5px 0;
+  margin: 0 0 1.75rem 0;
 
   color: rgb(138, 51, 36);
-  font-family: 'Satisfy', 'Libre Baskerville', serif;
-  font-size: 60px;
-  font-size: 3.75rem;
+  font: bold 58.245px 'Satisfy', 'Libre Baskerville', serif; /*76.245 - 18px*/
+  font-size: 3.2358rem;
+  line-height: 1;
 }
 
 p
 {
   max-width: 100%;
-  margin: 31.5px 0;
-  margin: 1.96875rem 0;
+  margin: 0 0 31.5px 0;
+  margin: 0 0 1.75rem 0;
 
+  font: 18px "Libre Baskerville", sans-serif;
+  font-size: 1rem;
   line-height: 1.75;
-  font-family: "Libre Baskerville", sans-serif;
-  font-size: 18px;
-  font-size: 1.125rem;
 }
 
 p.large
 {
-  margin: 30px 0;
-  margin: 1.875rem 0;
+  margin: 29.124px 0;
+  margin: 1.618rem 0;
 
   color: rgb(30,30,30);
-  line-height: 1.5;
-  font-size: 30px;
-  font-size: 1.875rem;
+  line-height: 1.624;
+  font-size: 29.124px;
+  font-size: 1.618rem;
   font-weight: normal;
 }
 
@@ -318,7 +322,7 @@ img
   /* For the ALT text */
   font-family: "Libre Baskerville", sans-serif;
   font-size: 18px;
-  font-size: 1.125rem;
+  font-size: 1rem;
 }
 
 img.left-aligned
@@ -358,6 +362,8 @@ section
   width: 100%;
   min-height: 100%;
   margin-bottom: 8%;
+  padding-top: 31.5px;
+  padding-top: 1.75rem;
 
   border-top: 1px solid rgb(180,180,180);
 }
@@ -369,13 +375,13 @@ section h2 + p
 
 section h2
 {
-  margin-top: 21px;
-  margin-bottom: 10px;
+  margin: 20.98px 0 10.4895px 0;
+  margin: 1.1655rem 0 0.58275rem 0;
 
   line-height: 1.75;
   font-family: "Libre Baskerville", sans-serif;
   font-size: 18px;
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: normal;
 }
 
@@ -385,20 +391,12 @@ section .currently-learning
   margin-top: 0;
   padding: 4px 7px;
 
-  background-color: rgb(10,0,90);
-  color: white;
+  border: 1px dotted rgb(10,0,90);
 }
 
 section .currently-learning:before
 {
   content: "Learning Now > ";
-  color: rgb(190,190,190);
-}
-
-section .currently-learning a:hover
-{
-  background-color: white;
-  color: rgb(10,0,90);
 }
 
 section .learn-in-future
@@ -407,26 +405,12 @@ section .learn-in-future
   margin-top: 0;
   padding: 4px 7px;
 
-  background-color: rgb(138, 51, 36);
-  color: white;
+  border: 1px dotted rgb(138, 51, 36);
 }
 
 section .learn-in-future:before
 {
     content: "In the Future > ";
-    color: rgb(190,190,190);
-}
-
-section .learn-in-future a, section .currently-learning a
-{
-   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-   color: white;
-}
-
-section .learn-in-future a:hover
-{
-  background-color: white;
-  color: rgb(138, 51, 36);
 }
 
 #top
@@ -450,11 +434,6 @@ section .learn-in-future a:hover
   font-family: "Arvo";
 }
 
-#thoughts h1
-{
-  margin-bottom: 10px;
-}
-
 .back, .next
 {
   padding: 10px 8px;
@@ -464,7 +443,7 @@ section .learn-in-future a:hover
   border: none;
   background: none;
   font-size: 14px;
-  font-size: 0.875rem;
+  font-size: 0.777rem;
 }
 
 .back:hover, .next:hover
@@ -481,12 +460,12 @@ article
 
 article h2
 {
-  margin-bottom: 10px;
-  margin-top: 15px;
-
-  font-family: "Arvo", "Libre Baskerville", "Georgia", serif;
-  font-size: 30px;
-  font-size: 1.875rem; 
+  margin: 37.8px 0 25.2px 0;
+  margin: 2.1rem 0 1.4rem 0;
+ 
+  font: 29.124px "Arvo", "Libre Baskerville", "Georgia", serif;
+  font-size: 1.618rem; 
+  line-height: 1;
   font-weight: bold;
 }
 
@@ -497,7 +476,7 @@ article h3
 
   color: rgb(130,130,130);
   font-size: 16px;
-  font-size: 1rem;
+  font-size: 0.888rem;
   font-variant: small-caps;
 }
 
@@ -505,12 +484,18 @@ article time
 {
   color: rgb(130,130,130);
   font-size: 13px;
-  font-size: 0.8125rem;
+  font-size: 0.722rem;
+}
+
+article p:first-of-type
+{
+  margin-top: 31.5px;
+  margin-top: 1.75rem;
 }
 
 @media all and (max-height: 600px)
 {
-  article img
+  img
   {
     max-height: 550px;
   }
@@ -521,12 +506,12 @@ article time
   .content
   {
     float: left;
-    width: 93%;
+    width: 100%;
     max-width: none;
     margin-left: 0;
-    padding-right: 0;
   }
 
+/*
   h1
   {
     font-size: 45px;
@@ -541,42 +526,30 @@ article time
     font-size: 23px;
     font-size: 1.4375rem;
   }
+*/
+    body, html
+    {
+        font-size: 16px !important;
+    }
 }
 
 @media all and (max-width: 480px), /*all resolutions below 480px*/
 /*also high-def browsers below 1000px*/
 all and (max-width: 1000px) and (-webkit-min-device-pixel-ratio: 1.5),
-all and (max-width: 1000px) and (min--moz-device-pixel-ratio: 1.5),
-all and (max-width: 1000px) and (min-device-pixel-ratio: 1.5),
-all and (max-width: 1000px) and (min-resolution: 1.5dppx)
+all and (max-width: 1000px) and (min-resolution: 144dpi)
 {
-  p.large
+  body, html
   {
-    margin: 20px 0;
-    margin: 1.25rem 0;
-
-    font-size: 20px;
-    font-size: 1.25rem;
-  }
-  
-  p
-  {
-    margin: 28px 0;
-    margin: 1.75rem 0;
-
-    font-size: 16px;
-    font-size: 1rem;
+    font-size: 14px !important;
   }
 }
 
 @media all and (-webkit-min-device-pixel-ratio: 1.5),
-       all and (min--moz-device-pixel-ratio: 1.5),
-       all and (min-device-pixel-ratio: 1.5),
-       all and (min-resolution: 1.5dppx)
+       all and (min-resolution: 144dpi)
 {
   .back, .next
   {
     font-size: 18px;
-    font-size: 1.125rem;
+    font-size: 1rem;
   }
 }
