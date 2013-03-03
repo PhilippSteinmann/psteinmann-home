@@ -361,11 +361,11 @@ img.medium-size
 
 .slideshow
 {
-  float: left;
+  float: right;
   width: 300px;
   max-width: 100%;
   height: 350px;
-  margin-right: 47px;
+  margin-left: 47px;
 }
 
 .slideshow-img
