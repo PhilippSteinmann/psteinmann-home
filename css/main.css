@@ -243,6 +243,20 @@ all and (max-width: 1000px) and (min-resolution: 144dpi)
   {
     display: block;
   }
+
+    header p.description, ul.links a
+    {
+        font-size: 16px;
+        font-size: 1rem;
+    }
+
+    header .signature
+    {
+        margin-top: 4px;
+
+        font-size: 20px;
+        font-size: 1.25rem;
+    }
 }
 
 
@@ -283,6 +297,7 @@ h1
   margin: 0 0 31.5px 0;
   margin: 0 0 1.75rem 0;
 
+    text-align: center;
   color: rgb(138, 51, 36);
   font: bold 58.245px 'Satisfy', 'Libre Baskerville', serif; /*76.245 - 18px*/
   font-size: 3.2358rem;
@@ -511,26 +526,22 @@ article p:first-of-type
     margin-left: 0;
   }
 
-/*
-  h1
-  {
-    font-size: 45px;
-    font-size: 2.8125;
-  }
-
-  p.large
-  {
-    margin: 23px 0;
-    margin: 1.4755rem 0;
-
-    font-size: 23px;
-    font-size: 1.4375rem;
-  }
-*/
     body, html
     {
         font-size: 16px !important;
     }
+
+    h1
+    {
+        line-height: 1.25;
+    }
+
+    img.medium-sized
+    {
+        margin-bottom: 31.5px;
+        margin-bottom: 1.96875rem;
+    }
+
 }
 
 @media all and (max-width: 480px), /*all resolutions below 480px*/
