@@ -383,29 +383,26 @@ section
   border-top: 1px solid rgb(180,180,180);
 }
 
-section h2 + p
-{
-  margin-top: 0;
-}
-
 section h2
 {
-  margin: 20.98px 0 10.4895px 0;
-  margin: 1.1655rem 0 0.58275rem 0;
+  margin: 42px 0 21px 0;
+  margin: 2.33rem 0 1.166rem 0;
 
-  line-height: 1.75;
-  font-family: "Libre Baskerville", sans-serif;
-  font-size: 18px;
+  line-height: 1;
+  font: 18px "Libre Baskerville", sans-serif;
   font-size: 1rem;
   font-weight: normal;
 }
 
-section .currently-learning
+.learning p
 {
   display: inline-block;
-  margin-top: 0;
+  margin: 0;
   padding: 4px 7px;
+}
 
+section .currently-learning
+{
   border: 1px dotted rgb(10,0,90);
 }
 
@@ -416,9 +413,8 @@ section .currently-learning:before
 
 section .learn-in-future
 {
-  display: inline-block;
-  margin-top: 0;
-  padding: 4px 7px;
+  margin-top: 15.75px;
+  margin-top: 0.875rem;
 
   border: 1px dotted rgb(138, 51, 36);
 }
