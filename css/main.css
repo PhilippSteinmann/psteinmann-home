@@ -471,10 +471,10 @@ section .learn-in-future:before
 
 #programming .forkbomb
 {
-    float: left;
+    float: right;
     width: 400px;
-    margin-right: 18px;
-    margin-right: 1rem;
+    margin-left: 18px;
+    margin-left: 1rem;
 }
 
 #literature h1
