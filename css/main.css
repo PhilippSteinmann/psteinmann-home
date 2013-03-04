@@ -77,6 +77,12 @@ a, button
   cursor: pointer;
 }
 
+small
+{
+    font-size: 11.125px;
+    font-size: 0.625rem;
+}
+
 /* === Header Style === */
 header
 {
@@ -359,13 +365,25 @@ img.medium-size
   width: 350px;
 }
 
-.intro-img
+#intro aside
 {
   float: right;
+}
+
+.intro-img
+{
   width: auto;
   max-width: 100%;
   height: 13.13816rem; /*5 * 47px*/
   margin-left: 2.61111rem;
+}
+
+.intro-img + small
+{
+    float: right;
+    display: block;
+    margin-top: 15.75px;
+    margin-top: 0.875rem;
 }
 
 section
@@ -429,6 +447,21 @@ section .learn-in-future:before
 {
   font-family: "VT323", "Satisfy", "Libre Baskerville", "Georgia", serif;
   font-weight: normal;
+}
+
+#programming .messing-with-perl
+{
+    width: 450px;
+    margin: 0 auto;
+}
+
+.messing-with-perl + small
+{
+    display: block;
+    margin-top: 15.75px;
+    margin-top: 0.875rem;
+
+    text-align: center;
 }
 
 #literature h1
