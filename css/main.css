@@ -359,18 +359,13 @@ img.medium-size
   width: 350px;
 }
 
-.slideshow
+.intro-img
 {
   float: right;
-  width: 300px;
+  width: auto;
   max-width: 100%;
-  height: 350px;
-  margin-left: 47px;
-}
-
-.slideshow-img
-{
-  width: 100%;
+  height: 13.13816rem; /*5 * 47px*/
+  margin-left: 2.61111rem;
 }
 
 section
@@ -414,8 +409,8 @@ section .currently-learning:before
 
 section .learn-in-future
 {
-  margin-top: 15.75px;
-  margin-top: 0.875rem;
+  margin: 15.75px 0;
+  margin-top: 0.875rem 0;
 
   border: 1px dotted rgb(138, 51, 36);
 }
@@ -425,7 +420,7 @@ section .learn-in-future:before
     content: "In the Future > ";
 }
 
-#top
+#intro
 {
   border-top: none;
 }
@@ -539,6 +534,19 @@ article p:first-of-type
         margin-bottom: 1.96875rem;
     }
 
+}
+
+@media all and (max-width: 720px), /*all resolutions below 720px*/
+/*also high-def browsers below 1000px*/
+all and (max-width: 1000px) and (-webkit-min-device-pixel-ratio: 1.5),
+all and (max-width: 1000px) and (min-resolution: 144dpi)
+{
+    .intro-img, img.right-aligned
+    {
+        float: none;
+        display: block;
+        margin: 0 auto;
+    }
 }
 
 @media all and (max-width: 480px), /*all resolutions below 480px*/
