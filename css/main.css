@@ -8,35 +8,6 @@ http://modularscale.com/scale/?px1=18&px2=&ra1=1.618&ra2=0
 Thanks to http://alistapart.com/article/more-meaningful-typography
 ----------------------------------------------- */
 
-/*
-element
-{
-  box-model & position
-
-  styling
-}
-
-box-model & position:
-display
-width
-min-width
-height
-min-height
-position
-top, right, bottom, left
-float
-margin
-padding
-
-styling:
-border
-background-color
-color
-font
-text
-*/
-
-
 /* === Sitewide Defaults === */
 *
 {
@@ -54,18 +25,6 @@ body, html
   font: 18px 'Libre Baskerville', serif;
 }
 
-::selection
-{
-  background: rgba(15, 0, 60, 0.99);
-  color: white; 
-}
-
-::-moz-selection
-{
-  background-color: rgb(15,0,60);
-  color: white;
-}
-
 h1, h2, h3, p, a
 {
   text-rendering: optimizeLegibility; 
@@ -77,11 +36,18 @@ a, button
   cursor: pointer;
 }
 
-small
+::selection
 {
-    font-size: 11.125px;
-    font-size: 0.625rem;
+  background: rgba(15, 0, 60, 0.99);
+  color: white; 
 }
+
+::-moz-selection
+{
+  background-color: rgb(15, 0, 60);
+  color: white;
+}
+
 
 /* === Header Style === */
 header
@@ -136,13 +102,11 @@ header p.description
   color: white;
 }
 
-header .signature
+.description .signature
 {
   display: block;
 
-  font-family: 'Satisfy', 'Libre Baskerville', serif;
-  font-size: 19px; /* Oops, I did it again*/
-  font-size: 1.055rem;
+  font: 19px 'Satisfy', 'Libre Baskerville', serif; /*Does not scale, stays at this size*/
 }
 
 header .show-nav
@@ -155,7 +119,7 @@ header .show-nav
   border: none;
   background: none;
   color: white;
-  font: small-caps bold 18px 'Libre Baskerville', "Georgia", serif;
+  font: small-caps bold 18px 'Libre Baskerville', "Georgia", serif; /*Does not scale either*/
 }
 
 header ul.links
@@ -204,7 +168,7 @@ all and (min-width: 481px) and (max-width: 1000px) and (max-resolution: 96dpi)
     width: 100%;
   }
 
-  header .header-identification
+  header .identification
   {
     float: left;
     width: 40%;
@@ -331,6 +295,12 @@ p.large
   font-size: 29.124px;
   font-size: 1.618rem;
   font-weight: normal;
+}
+
+small
+{
+    font-size: 11.125px;
+    font-size: 0.618rem;
 }
 
 img
