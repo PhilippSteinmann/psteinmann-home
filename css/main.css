@@ -317,6 +317,13 @@ img
   font-size: 1rem;
 }
 
+iframe
+{
+    display: block;
+    margin: 0 auto 31.5px auto;
+    margin: 0 auto 1.75rem auto;
+}
+
 #intro aside
 {
   float: right;
